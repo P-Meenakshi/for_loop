@@ -14,7 +14,7 @@ public class PhoneNumberValidator {
     }
 
     public String getInput() {
-      
+      return null;
     }
 
     public void displayResult(boolean result) {
@@ -22,6 +22,6 @@ public class PhoneNumberValidator {
     }
 
     public boolean validatePhoneNumber(String s) {
-       
+       return false;
     }
 }
