@@ -14,14 +14,33 @@ public class PhoneNumberValidator {
     }
 
     public String getInput() {
-      return null;
+        String s = sc.nextLine();
+        return s;
     }
 
     public void displayResult(boolean result) {
+        if(result){
+            System.out.println("Valid");
+        }
+        else if(!result){
+            System.out.println("Invalid or empty string");
+        }
        
     }
 
     public boolean validatePhoneNumber(String s) {
-       return false;
+        int f=0;
+        if(s==null || s.isEmpty())
+        {return false;}
+        for(int i=0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(Character.isDigit(c)){f++;}
+            else if(c!='-')
+                break;
+        }
+        if(f==10){
+            return true;}
+        else
+        return false;
     }
 }
